@@ -1,5 +1,17 @@
 Forked by Shopping-Cross, if you have any question please send email to: shopping-cross@despegar.com
 
+1) Add in the package.json the following dependency.
+
+In this example, v2.24.0 is the branch you are going to download. In future versions you may have to change this value to the last branch created.
+
+...
+"dependencies": {
+  "moment": "despegar/moment#v2.24.0",
+}
+....
+
+2) Run: 'npm install' in yout project dir
+
 <hr />
 
 A lightweight JavaScript date library for parsing, validating, manipulating, and formatting dates.
