@@ -159,7 +159,7 @@ test('months', function (assert) {
     });
     moment.defineLocale('child-months', {
         parentLocale: 'base-months',
-        months : 'First_Second_Third_Fourth_Fifth_Sixth_Seventh_Eighth_Ninth_Tenth_Eleventh_Twelveth '.split('_')
+        months : 'First_Second_Third_Fourth_Fifth_Sixth_Seventh_Eighth_Ninth_Tenth_Eleventh_Twelfth '.split('_')
     });
     assert.ok(moment.utc('2015-01-01', 'YYYY-MM-DD').format('MMMM'), 'First', 'months uses child');
 });
@@ -170,7 +170,7 @@ test('define child locale before parent', function (assert) {
 
     moment.defineLocale('months-x', {
         parentLocale: 'base-months-x',
-        months : 'First_Second_Third_Fourth_Fifth_Sixth_Seventh_Eighth_Ninth_Tenth_Eleventh_Twelveth '.split('_')
+        months : 'First_Second_Third_Fourth_Fifth_Sixth_Seventh_Eighth_Ninth_Tenth_Eleventh_Twelfth '.split('_')
     });
     assert.equal(moment.locale(), 'en', 'failed to set a locale requiring missing parent');
 
@@ -185,9 +185,9 @@ test('define child locale before parent', function (assert) {
 });
 
 test('lazy load parentLocale', function (assert) {
-    moment.defineLocale('de_test', {
-        parentLocale: 'de',
+    moment.defineLocale('en_test', {
+        parentLocale: 'en',
         monthsShort: ['M1', 'M2', 'M3', 'M4', 'M5', 'M6', 'M7', 'M8', 'M9', 'M10', 'M11', 'M12']
     });
-    assert.equal(moment.locale(), 'de_test', 'failed to lazy load parentLocale');
+    assert.equal(moment.locale(), 'en_test', 'failed to lazy load parentLocale');
 });
