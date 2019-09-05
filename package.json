@@ -95,5 +95,6 @@
         "output": [
             "locale/*.js"
         ]
-    }
+    },
+    "dependencies": {}
 }
